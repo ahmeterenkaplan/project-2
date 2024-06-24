@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --primary-color: #323238;
+
+    --btn-color: #E1E1E6;
+    --btn-hover: #d3d3d8;
+    --btn-select: #f5f5f5;
+    --btn-disable: #7e7e7e;
+
+    --btn-soundForest-color: #6fff00;
+    --btn-soundForest-color-hover: #9efc57;
+
+    --btn-soundRain-color: #00c3ff;
+    --btn-soundRain-color-hover: #40d0fc;
+
+    --btn-soundCoffeeShop-color: #e0bb00;
+    --btn-soundCoffeeShop-color-hover: #fade53;
+
+    --btn-soundFireplace-color: #ff0000;
+    --btn-soundFireplace-color-hover: #f85353;
+
+    font-size: 62.5%;
+}
+
+body.active {
+    --bg-color: #121214;
+    --primary-color: #f5f5f5;
+
+    --btn-color: #29292E;
+    --btn-hover: #1f1f1f;
+
+    --primary-volume-color: #f5f5f5;
+    --segundary-volume-color: #5c5c5c;
+}
+
+body {
+    background: url("/core/bg.png");
+    color: var(--primary-color);
+
+    font-family: 'Roboto', sans-serif;
+
+    display: grid;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
+
+.temas {
+    display: grid;
+    justify-self: end;
+    align-self: baseline;
+}
+
+.temas button {
+    margin: 2rem 4rem;
+}
+
+main {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    margin-top: -30rem;
+
+    gap: 20rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.hide {
+    display: none;
+}
+
+button svg path {
+    fill: var(--primary-color)
+}
+
+@media (max-width: 650px) {
+    main {
+        display: block;
+        margin-top: -50rem;
+    }
+}

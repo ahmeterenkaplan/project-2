@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.volume-control {
+    width: 32rem;
+    height: 4rem;
+    background-color: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    outline: none;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.volume-slider-forest-Bg {
+    background-color: var(--btn-soundForest-color);
+}
+
+.volume-slider-rain-Bg {
+    background-color: var(--btn-soundRain-color);
+}
+
+.volume-slider-coffeeShop-Bg {
+    background-color: var(--btn-soundCoffeeShop-color);
+}
+
+.volume-slider-fireplace-Bg {
+    background-color: var(--btn-soundFireplace-color);
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7a7a7a;
+    cursor: pointer;
+    margin-top: -1px;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+}
+
+#sonds {
+    width: clamp(14rem, 20rem + 29vw, 42rem);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40rem;
+}
+
+#sonds button {
+    padding: 4.8rem;
+    margin: 1.6rem;
+    border-radius: 2.4rem;
+
+    background: var(--btn-color);
+}
+
+#sonds .forest:hover {
+    background: var(--btn-soundForest-color-hover);
+    transition: 0.6s;
+}
+
+#sonds .rain:hover {
+    background: var(--btn-soundRain-color-hover);
+    transition: 0.6s;
+}
+
+#sonds .coffeeShop:hover {
+    background: var(--btn-soundCoffeeShop-color-hover);
+    transition: 0.6s;
+}
+
+#sonds .fireplace:hover {
+    background: var(--btn-soundFireplace-color-hover);
+    transition: 0.6s;
+}
+
+.discreet {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#sonds button svg {
+    width: clamp(1.6rem, 4rem + 1.6vw, 5rem);
+}
+
+#sonds .forest.select {
+    background: var(--btn-soundForest-color);
+}
+
+#sonds button.rain.select {
+    background: var(--btn-soundRain-color);
+}
+
+#sonds button.coffeeShop.select {
+    background: var(--btn-soundCoffeeShop-color);
+}
+
+#sonds button.fireplace.select {
+    background: var(--btn-soundFireplace-color);
+}
+
+#sonds button.select svg path {
+    fill: var(--btn-select)
+}
+
+@media (max-width: 930px) {
+    main {
+        gap: 10rem;
+    }
+
+    #sonds {
+        text-align: center;
+        margin: 2rem auto;
+        width: 32rem;
+    }
+
+    #sonds button {
+        padding: 3.5rem;
+        margin: 1rem;
+    }
+
+    #sonds .volume-control {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin-top: 1rem;
+        width: 25rem;
+    }
+}
+
+@media (max-width: 450px) {
+    #sonds button {
+        padding: 2.4rem;
+        margin: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    #sonds {
+        display: block;
+    }
+
+    #sonds .volume-control{
+        width: 22rem;
+        margin: auto;
+    }
+}

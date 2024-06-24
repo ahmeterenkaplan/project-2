@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#settings {
+    font-size: clamp(4rem, 4rem + 10vw, 12rem);
+
+    align-items: center;
+    text-align: center;
+    display: grid;
+}
+
+#settings #timer {
+    justify-self: center;
+    align-self: end;
+
+    display: flex;
+}
+
+#settings #buttons-settings {
+    display: flex;
+    align-self: start;
+    justify-self: center;
+
+    gap: 2.2rem;
+}
+
+#settings #buttons-settings button svg {
+    width: clamp(3.2rem, 2rem + 10vw, 6rem);
+}
+
+#settings #buttons-settings button.disable svg path,
+#settings #buttons-settings button.disable,
+#settings #buttons-settings button.disable:hover {
+    cursor: default;
+    transition: none;
+    transform: none;
+    fill: var(--btn-disable);
+}
+
+@media (max-width: 930px) {
+    #settings #timer {
+        padding-bottom: 0;
+    }
+
+    #settings #buttons-settings {
+        gap: 1.6rem;
+    }
+}
+
+@media (max-width: 650px) {
+    
+    .buttons-settings {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+    #settings #timer {
+        padding-bottom: 2rem;
+    }
+
+    #settings .buttons-settings {
+        gap: 1rem;
+    }
+}
